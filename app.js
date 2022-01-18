@@ -1,6 +1,8 @@
 let symbol = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 let numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-let kir = ['а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п']
+let kir = ['а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'э', 'ю', 'я']
+let special = [' ', '!', '"', '#']
+//$ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _` { | } ~
 let password = ''
 let passwordLength = +document.querySelector('#PasswordLength').value
 let upCase = 0
@@ -8,6 +10,7 @@ let upCase = 0
 document.querySelector('#Numbers').addEventListener('change', addNums, false)
 document.querySelector('#Kir').addEventListener('change', addKir, false)
 document.querySelector('#Upper').addEventListener('change', addUpper, false)
+document.querySelector('#Special').addEventListener('change', addSpec, false)
 
 createNewPassword()
 
@@ -49,6 +52,16 @@ function addUpper(e) {
     }
     else {
         upCase = 0
+    }
+    createNewPassword()
+}
+
+function addSpec(e) {
+    if (e.target.checked) {
+        symbol = [...symbol, ...special]
+    }
+    else {
+        symbol = symbol.filter(x => !special.includes(x))
     }
     createNewPassword()
 }
