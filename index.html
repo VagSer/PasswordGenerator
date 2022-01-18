@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Simple Password Generator</title>
+</head>
+<body>
+    <div class="card">
+        <h3 class="card__name">Генератор пароля</h3>
+        <div class="password">
+            <p class='password__txt'></p>
+            <button class="password__button" onclick='copyPassword()'>Copy</button>
+        </div>
+        <div class="card__options">
+            <div>
+                <label for="PasswordLength">Длина пароля</label>
+                <input class='card__input' type="number" name="PasswordLength" value='8' max='20' id="PasswordLength" onchange='createNewPassword()'>
+            </div>
+            <div>
+                <input class='card__checkbox' type="checkbox" name="Kir" id="Kir">
+                <label for="Kir">Включить кириллицу</label>
+            </div>
+            <div>
+                <input class='card__checkbox' type="checkbox" name="Upper" id="Upper">
+                <label for="Upper">Включить заглавные буквы</label>
+            </div>
+            <div>
+                <input class='card__checkbox' type="checkbox" name="Numbers" id="Numbers" onchecked='addNums()'>
+                <label for="Numbers">Включить цифры</label>
+            </div>
+            <button class='card__button' onclick='createNewPassword()'>Создать пароль</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

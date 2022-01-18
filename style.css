@@ -1,0 +1,69 @@
+body {
+    background: linear-gradient(45deg, rgb(33, 165, 0), rgb(8, 8, 236));
+    height: 100vh;
+}
+
+.card {
+    background-color: rgb(250, 225, 181);
+    border: 1px solid black;
+    width: min(90%, 300px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.password {
+    display: flex;
+    width: min(80%, 280px);
+    margin: 0 auto;
+}
+
+.password__txt {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    width: 80%;
+}
+
+.password__button {
+    width: 20%;
+    margin: 5px 0;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: rgb(150, 150, 255);
+}
+
+.card__name {
+    text-align: center;
+}
+
+.card__input {
+    width: 2rem;
+    height: 1.5rem;
+}
+
+.card__password{
+    margin: 0 auto;
+}
+
+.card__options {
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__button {
+    margin: 5px 0;
+    border: 1px solid black;
+    border-radius: 3px;
+    background-color: rgb(150, 150, 255);
+}
+
+.card__button:hover,
+.password__button:hover {
+    color: white;
+    background-color: rgb(50, 50, 255);
+}
+
+
+
