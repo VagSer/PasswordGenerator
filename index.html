@@ -14,26 +14,26 @@
             <p class='password__txt'></p>
             <button class="password__button" onclick='copyPassword()'>Copy</button>
         </div>
-        <div class="card__options">
-            <div>
+        <div class="options">
+            <div class="options__section">
                 <label for="PasswordLength">Длина пароля</label>
                 <input class='card__input' type="number" name="PasswordLength" value='8' max='20' id="PasswordLength" onchange='createNewPassword()'>
             </div>
-            <div>
-                <input class='card__checkbox' type="checkbox" name="Kir" id="Kir">
+            <div class="options__section">
                 <label for="Kir">Включить кириллицу</label>
+                <input class='card__checkbox' type="checkbox" name="Kir" id="Kir">
             </div>
-            <div>
-                <input class='card__checkbox' type="checkbox" name="Upper" id="Upper">
+            <div class="options__section">
                 <label for="Upper">Включить заглавные буквы</label>
+                <input class='card__checkbox' type="checkbox" name="Upper" id="Upper">
             </div>
-            <div>
-                <input class='card__checkbox' type="checkbox" name="Numbers" id="Numbers" onchecked='addNums()'>
+            <div class="options__section">
                 <label for="Numbers">Включить цифры</label>
+                <input class='card__checkbox' type="checkbox" name="Numbers" id="Numbers" onchecked='addNums()'>
             </div>
-            <div>
-                <input class='card__checkbox' type="checkbox" name="Numbers" id="Special" onchecked='addSpec()'>
+            <div class="options__section">
                 <label for="Numbers">Включить спец.символы</label>
+                <input class='card__checkbox' type="checkbox" name="Numbers" id="Special" onchecked='addSpec()'>
             </div>
             <button class='card__button' onclick='createNewPassword()'>Создать пароль</button>
         </div>

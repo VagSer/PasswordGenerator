@@ -39,18 +39,13 @@ body {
 
 .card__input {
     width: 2rem;
-    height: 1.5rem;
+    height: 1rem;
 }
 
 .card__password{
     margin: 0 auto;
 }
 
-.card__options {
-    margin: 10px auto;
-    display: flex;
-    flex-direction: column;
-}
 
 .card__button {
     margin: 5px 0;
@@ -70,5 +65,17 @@ body {
     background-color: rgb(150, 150, 150);
 }
 
+.options {
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.options__section {
+    margin: 2px 0;
+    display: flex;
+    justify-content: space-between;
+}
 
 
