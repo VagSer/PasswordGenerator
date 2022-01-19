@@ -1,8 +1,7 @@
 let symbol = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 let numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 let kir = ['а', 'б', 'в', 'г', 'д', 'е', 'ж', 'з', 'и', 'й', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т', 'у', 'ф', 'х', 'ц', 'ч', 'ш', 'щ', 'ъ', 'э', 'ю', 'я']
-let special = [' ', '!', '"', '#']
-//$ % & ' ( ) * + , - . / : ; < = > ? @ [ \ ] ^ _` { | } ~
+let special = ['\\',' ', '!', '"', '#', '$', '%', '&', "'", '(', ')', '*', '+', ',', '-', '.', '/', ':', ';', '<', '=', '>', '?', '@', '[', ']', '^', '_', '`', '{', '|', '}', '~']
 let password = ''
 let passwordLength = +document.querySelector('#PasswordLength').value
 let upCase = 0
@@ -22,7 +21,6 @@ function createNewPassword() {
         password += Nsymbol    
     }
     document.querySelector('.password__txt').innerHTML = `${password}`
-    console.log(symbol)
 }
 
 
@@ -68,8 +66,15 @@ function addSpec(e) {
 
 function copyPassword() {
     let copyPass = document.querySelector(".password__txt").innerHTML;
+    document.querySelector('.password__button').setAttribute('disabled', true)
+    document.querySelector('.card__button').setAttribute('disabled', true)
     navigator.clipboard.writeText(copyPass)
     .then(()=> {
-        alert('Пароль скопирован')
+        document.querySelector('.card__name').innerHTML = 'Пароль скопирован'
     })
+    setTimeout(() => {
+        document.querySelector('.card__name').innerHTML = 'Генератор пароля'
+        document.querySelector('.password__button').removeAttribute('disabled')
+        document.querySelector('.card__button').removeAttribute('disabled')
+    }, 2000)
 }
