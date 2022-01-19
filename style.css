@@ -65,5 +65,10 @@ body {
     background-color: rgb(50, 50, 255);
 }
 
+.card__button:disabled,
+.password__button:disabled{
+    background-color: rgb(150, 150, 150);
+}
+
 
 
