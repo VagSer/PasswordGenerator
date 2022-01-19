@@ -17,22 +17,22 @@
         <div class="options">
             <div class="options__section">
                 <label for="PasswordLength">Длина пароля</label>
-                <input class='card__input' type="number" name="PasswordLength" value='8' min='8' max='20' id="PasswordLength" onchange='createNewPassword()'>
+                <input class='card__input' type="number" name="PasswordLength" value='8' min='8' max='18' id="PasswordLength" onchange='createNewPassword()'>
             </div>
             <div class="options__section">
-                <label for="Kir">Включить кириллицу</label>
+                <label for="Kir">Кириллица</label>
                 <input class='card__checkbox' type="checkbox" name="Kir" id="Kir">
             </div>
             <div class="options__section">
-                <label for="Upper">Включить заглавные буквы</label>
+                <label for="Upper">Заглавные буквы</label>
                 <input class='card__checkbox' type="checkbox" name="Upper" id="Upper">
             </div>
             <div class="options__section">
-                <label for="Numbers">Включить цифры</label>
+                <label for="Numbers">Цифры</label>
                 <input class='card__checkbox' type="checkbox" name="Numbers" id="Numbers" onchecked='addNums()'>
             </div>
             <div class="options__section">
-                <label for="Numbers">Включить спец.символы</label>
+                <label for="Numbers">Специальные символы</label>
                 <input class='card__checkbox' type="checkbox" name="Numbers" id="Special" onchecked='addSpec()'>
             </div>
             <button class='card__button' onclick='createNewPassword()'>Создать пароль</button>
